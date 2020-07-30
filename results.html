@@ -1,0 +1,403 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>12wackies Results</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+<script>
+  version = "Test Edition #1" //Remember to update this before making changes to the test itself!
+</script>
+</head>
+<script type="application/javascript"
+        src="ideologies.js">
+</script>
+
+<body>
+<h1>12wackies</h1>
+<hr>
+
+<h1>Results</h1>
+
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-altruity" src="value_images/altruity.png" height="128pt"/>
+    <div class="bar altruity" id="bar-altruity"><div class="text-wrapper" id="altruity"></div></div>
+    <div class="bar avarice" id="bar-avarice"><div class="text-wrapper" id="avarice"></div></div>
+    <img id="img-avarice" src="value_images/avarice.png" height="128pt"/>
+</div>
+<h2>Diplomatic Axis: <span class="weight-300" id="diplomatic-label"></span></h2>
+<div class="axis">
+    <img id="img-cosmocracy" src="value_images/cosmocracy.png" height="128pt"/>
+    <div class="bar cosmocracy" id="bar-cosmocracy"><div class="text-wrapper" id="cosmocracy"></div></div>
+    <div class="bar incognitism" id="bar-incognitism"><div class="text-wrapper" id="incognitism"></div></div>
+    <img id="img-incognitism" src="value_images/incognitism.png" height="128pt"/>
+</div>
+<h2>Civil Axis: <span class="weight-300" id="state-label"></span></h2>
+<div class="axis">
+    <img id="img-self" src="value_images/self.png" height="128pt"/>
+    <div class="bar self" id="bar-self"><div class="text-wrapper" id="self"></div></div>
+    <div class="bar totality" id="bar-totality"><div class="text-wrapper" id="totality"></div></div>
+    <img id="img-totality" src="value_images/totality.png" height="128pt"/>
+</div>
+<h2>Moralism Axis: <span class="weight-300" id="morlety-label"></span></h2>
+<div class="axis">
+    <img id="img-moralist" src="value_images/moralist.png" height="128pt"/>
+    <div class="bar moralist" id="bar-moralist"><div class="text-wrapper" id="moralist"></div></div>
+    <div class="bar immorality" id="bar-immorality"><div class="text-wrapper" id="immorality"></div></div>
+    <img id="img-immorality" src="value_images/immorality.png" height="128pt"/>
+</div>
+<h2>Order Axis: <span class="weight-300" id="order-label"></span></h2>
+<div class="axis">
+    <img id="img-chaotic" src="value_images/chaotic.png" height="128pt"/>
+    <div class="bar chaotic" id="bar-chaotic"><div class="text-wrapper" id="chaotic"></div></div>
+    <div class="bar systematic" id="bar-systematic"><div class="text-wrapper" id="systematic"></div></div>
+    <img id="img-systematic" src="value_images/systematic.png" height="128pt"/>
+</div>
+<h2>Technological Progress Axis: <span class="weight-300" id="technological-label"></span></h2>
+<div class="axis">
+    <img id="img-regressive" src="value_images/regressive.png" height="128pt"/>
+    <div class="bar regressive" id="bar-regressive"><div class="text-wrapper" id="regressive"></div></div>
+    <div class="bar replacement" id="bar-replacement"><div class="text-wrapper" id="replacement"></div></div>
+    <img id="img-replacement" src="value_images/replacement.png" height="128pt"/>
+</div>
+<h2>Hierarchy Axis: <span class="weight-300" id="hierarchy-label"></span></h2>
+<div class="axis">
+    <img id="img-egalitarian" src="value_images/egalitarian.png" height="128pt"/>
+    <div class="bar egalitarian" id="bar-egalitarian"><div class="text-wrapper" id="egalitarian"></div></div>
+    <div class="bar supremacist" id="bar-supremacist"><div class="text-wrapper" id="supremacist"></div></div>
+    <img id="img-supremacist" src="value_images/supremacist.png" height="128pt"/>
+</div>
+<h2>Religious Axis: <span class="weight-300" id="religious-label"></span></h2>
+<div class="axis">
+    <img id="img-nihilism" src="value_images/nihilism.png" height="128pt"/>
+    <div class="bar nihilism" id="bar-nihilism"><div class="text-wrapper" id="nihilism"></div></div>
+    <div class="bar esoteric" id="bar-esoteric"><div class="text-wrapper" id="esoteric"></div></div>
+    <img id="img-esoteric" src="value_images/esoteric.png" height="128pt"/>
+</div>
+<h2>Regional Axis: <span class="weight-300" id="regional-label"></span></h2>
+<div class="axis">
+    <img id="img-universalism" src="value_images/universalism.png" height="128pt"/>
+    <div class="bar universalism" id="bar-universalism"><div class="text-wrapper" id="universalism"></div></div>
+    <div class="bar urbanism" id="bar-urbanism"><div class="text-wrapper" id="urbanism"></div></div>
+    <img id="img-urbanism" src="value_images/urbanism.png" height="128pt"/>
+</div>
+<h2>Governmental Axis: <span class="weight-300" id="governmental-label"></span></h2>
+<div class="axis">
+    <img id="img-ochlocracy" src="value_images/ochlocracy.png" height="128pt"/>
+    <div class="bar ochlocracy" id="bar-ochlocracy"><div class="text-wrapper" id="ochlocracy"></div></div>
+    <div class="bar aristocracy" id="bar-aristocracy"><div class="text-wrapper" id="aristocracy"></div></div>
+    <img id="img-aristocracy" src="value_images/aristocracy.png" height="128pt"/>
+</div>
+<h2>Cultural Homogony Axis: <span class="weight-300" id="cultural-label"></span></h2>
+<div class="axis">
+    <img id="img-panculturalism" src="value_images/panculturalism.png" height="128pt"/>
+    <div class="bar panculturalism" id="bar-panculturalism"><div class="text-wrapper" id="panculturalism"></div></div>
+    <div class="bar monoculturalism" id="bar-monoculturalism"><div class="text-wrapper" id="monoculturalism"></div></div>
+    <img id="img-monoculturalism" src="value_images/monoculturalism.png" height="128pt"/>
+</div>
+<h2>Militarism Axis: <span class="weight-300" id="militarim-label"></span></h2>
+<div class="axis">
+    <img id="img-destructionism" src="value_images/destructionism.png" height="128pt"/>
+    <div class="bar destructionism" id="bar-destructionism"><div class="text-wrapper" id="destructionism"></div></div>
+    <div class="bar irenic" id="bar-irenic"><div class="text-wrapper" id="irenic"></div></div>
+    <img id="img-irenic" src="value_images/irenic.png" height="128pt"/>
+</div class="axis">
+<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+<p>Ideological matching is a work in progress and is much less accurate than the values and axes.<p>
+<p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to u/Datguard or u/lexsiek2004 you can also send us anything you want really<p>
+<hr/>
+<img src="" id="banner">
+<button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web stats"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
+stats"></a></div></noscript>
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    function setBarValue(name, value) {
+        innerel = document.getElementById(name)
+        outerel = document.getElementById("bar-" + name)
+        outerel.style.width = (value + "%")
+        innerel.innerHTML = (value + "%")
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = "hidden"
+        }
+    }
+
+    econArray = ["Communist","morlalist","morlal","Centrist","Market","Capitalist","Laissez-Faire"]
+    diplArray = ["Cosmopolitan","Internationalist","incognitismful","Balanced","Patriotic","Nationalist","Chauvinist"]
+    govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
+    sctyArray = ["Revolutionary","Very immoralityive","immoralityive","Neutral","moralistal","Very moralistal","Reactionary"]
+
+    function setLabel(val,ary) {
+        if (val > 100) { return "" } else
+        if (val > 90) { return ary[0] } else
+        if (val > 75) { return ary[1] } else
+        if (val > 60) { return ary[2] } else
+        if (val >= 40) { return ary[3] } else
+        if (val >= 25) { return ary[4] } else
+        if (val >= 10) { return ary[5] } else
+        if (val >= 0) { return ary[6] } else
+        	{return ""}
+    }
+
+    altruity  = getQueryVariable("e")
+    incognitism     = getQueryVariable("d")
+    self   = getQueryVariable("g")
+    immorality  = getQueryVariable("s")
+	chaotic = getQueryVariable("q")
+	replacement = getQueryVariable("p")
+	supremacist = getQueryVariable("u")
+	nihilism = getQueryVariable("h")
+	universalism = getQueryVariable("v")
+    avarice = (100 - altruity).toFixed(1)
+    cosmocracy = (100 - insula).toFixed(1)
+    totality = (100 - self).toFixed(1)
+    moralist = (100 - immorality).toFixed(1)
+	systematic =  (100 - chaos).toFixed(1)
+	regressive = (100 - replacement).toFixed(1)
+	egalitarian = (100 - supremacist).toFixed(1)
+	esoteric = (100 - nihilism).toFixed(1)
+	urbanism = (100 - universalism).toFixed(1)
+	aristocracy = (100 - ochlocracy).toFixed(1)
+	monoculturalism = (100 - panculturalism).toFixed(1)
+	irenic = (100 - destructionism).toFixed(1)
+
+    setBarValue("alruity", altruity)
+    setBarValue("avarice", avarice)
+    setBarValue("cosmocracy", cosmocracy)
+    setBarValue("incognitism", incognitism)
+    setBarValue("self", self)
+    setBarValue("totality", totality)
+    setBarValue("moralist", moralist)
+    setBarValue("immorality", immorality)
+	setBarValue("chaotic", chaotic)
+	setBarValue("systematic", systematic)
+	setBarValue("regressive", regressive)
+	setBarValue("replacement", replacement)
+	setBarValue("egalitarian", egalitarian)
+	setBarValue("supremacist", supremacist)
+	setBarValue("nihilism", nihilism)
+	setBarValue("esoteric", esoteric)
+	setBarValue("universalism", universalism)
+	setBarValue("urbanism", urbanism)
+	setBarValue("aristocracy", aristocracy)
+	setBarValue("ochlocracy", ochlocracy)
+	setBarValue("panculturalism", panculturalism)
+	setBarValue("monoculturalism", monoculturalism)
+	setBarValue("destructionism", destructionism)
+	setBarValue("irenic", irenic)
+	
+	
+
+    document.getElementById("economic-label").innerHTML = setLabel(altruity, econArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(incognitism, diplArray)
+    document.getElementById("civil-label").innerHTML = setLabel(self, civiArray)
+    document.getElementById("moralist-label").innerHTML = setLabel(immorality, morlArray)
+	document.getElementById("order-label").innerHTML = setLabel(chaotic, ordrArray)
+	document.getElementById("technological-label").innerHTML = setLabel(replacement, techArray)
+	document.getElementById("hierarchy-label").innerHTML = setLabel(supremacist, hierArray)
+	document.getElementById("religious-label").innerHTML = setLabel(nihilism, rlgsArray)
+	document.getElementById("regional-label").innerHTML = setLabel(universalism, rgnlArray)
+	document.getElementById("governmental-label").innerHTML = setLabel (ochlocracy, govtArray)
+	document.getElementById("cultural-label").innerHTML = setLabel (panculturalism, cultArray)
+	document.getElementById("militarist-label").innerHTML = setLabel (destructionism, miltArray)
+
+
+    ideology = ""
+    ideodist = Infinity
+    for (var i = 0; i < ideologies.length; i++) {
+        dist = 0
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - altruity), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - incognitism), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.civi - self), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.morl - immorality), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.ordr - chaotic), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.tech - replacement), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.hier - supremacist), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.rlgs - nihilism), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.rgnl - universalism), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.govt - ochlocracy), 1.73856063)	
+		dist += Math.pow(Math.abs(ideologies[i].stats.cult - panculturalism), 1.73856063)
+		dist += Math.pow(Math.abs(ideologies[i].stats.milt - destructionism), 1.73856063)
+        if (dist < ideodist) {
+            ideology = ideologies[i].name
+            ideodist = dist
+        }
+    }
+    document.getElementById("ideology-label").innerHTML = ideology
+
+    function createImage(src, x, y, w, h) {
+        img = new Image ()
+        img.src = src
+        img.onLoad = function() {
+            ctx.drawImage(img, x, y, w, h)
+        }
+    }
+
+    window.onload = function() {
+        var c = document.createElement("canvas")
+        var ctx = c.getContext("2d")
+        c.width = 800;
+        c.height = 650;
+        ctx.fillStyle = "#EEEEEE"
+        ctx.fillRect(0,0,800,650);
+
+        img = document.getElementById("img-altruity")
+        ctx.drawImage(img, 20, 170, 100, 100);
+        img = document.getElementById("img-avarice")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-cosmocracy")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-incognitism")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-self")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-totality")
+        ctx.drawImage(img, 680, 410, 100, 100)
+        img = document.getElementById("img-moralist")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-immorality")
+        ctx.drawImage(img, 680, 530, 100, 100)
+		img = document.getElementById("img-chaotic")
+        ctx.drawImage(img, 20, 650, 100, 100)
+        img = document.getElementById("img-systematic")
+        ctx.drawImage(img, 680, 650, 100, 100)
+		img = document.getElementById("img-regressive")
+        ctx.drawImage(img, 20, 770, 100, 100)
+        img = document.getElementById("img-replacement")
+        ctx.drawImage(img, 680, 770, 100, 100)
+		img = document.getElementById("img-egalitarian")
+        ctx.drawImage(img, 20, 890, 100, 100)
+        img = document.getElementById("img-supremacist")
+        ctx.drawImage(img, 680, 890, 100, 100)
+		img = document.getElementById("img-nihilism")
+        ctx.drawImage(img, 20, 1010, 100, 100)
+        img = document.getElementById("img-esoteric")
+        ctx.drawImage(img, 680, 1010, 100, 100)
+		img = document.getElementById("img-universalism")
+        ctx.drawImage(img, 20, 1130, 100, 100)
+        img = document.getElementById("img-urbanism")
+        ctx.drawImage(img, 680, 1130, 100, 100)
+		
+        
+
+        ctx.fillStyle="#222222"
+        ctx.fillRect(120, 180, 560, 80)
+        ctx.fillRect(120, 300, 560, 80)
+        ctx.fillRect(120, 420, 560, 80)
+        ctx.fillRect(120, 540, 560, 80)
+        ctx.fillStyle="#8f0e04"
+        ctx.fillRect(120, 184, 5.6*altruity-2, 72)
+        ctx.fillStyle="#fcd303"
+        ctx.fillRect(682-5.6*avarice, 184, 5.6*avarice-2, 72)
+        ctx.fillStyle="#107500"
+        ctx.fillRect(120, 304, 5.6*cosmocracy-2, 72)
+        ctx.fillStyle="#6f736e"
+        ctx.fillRect(682-5.6*incognitism, 304, 5.6*incognitism-2, 72)
+        ctx.fillStyle="#54ab91"
+        ctx.fillRect(120, 424, 5.6*self-2, 72)
+        ctx.fillStyle="#540d0d"
+        ctx.fillRect(682-5.6*totality, 424, 5.6*totality-2, 72)
+        ctx.fillStyle="#1512de"
+        ctx.fillRect(120, 544, 5.6*moralist-2, 72)
+        ctx.fillStyle="#12de3e"
+        ctx.fillRect(682-5.6*immorality, 544, 5.6*immorality-2, 72)
+		ctx.fillStyle="#d694e3"
+        ctx.fillRect(120, 664 5.6*chaotic)
+        ctx.fillStyle="#7ab9de"
+        ctx.fillRect(682-5.6*systematic, 664, 5.6*systematic-2, 72)
+		ctx.fillStyle="a1d154"
+		ctx.fillRect(120, 784 5.6*regressive)
+		ctx.fillStyle="d40834"
+		ctx.fillRect(682-5.6*replacement, 784, 5.6*replacement-2, 72)
+		ctx.fillStyle="edad0c"
+		ctx.fillRect(120, 904 5.6*egalitarian)
+		ctx.fillStyle="f2dda7"
+		ctx.fillRect(682-5.6*supremacist, 904, 5.6*supremacist-2, 72)
+		ctx.fillStyle="4f4d49"
+		ctx.fillRect(120, 1024 5.6*nihilism)
+		ctx.fillStyle="a67108"
+		ctx.fillRect(682-5.6*esoteric, 1024, 5.6*esoteric-2, 72)
+		ctx.fillStyle="deb7ed"
+		ctx.fillRect(120, 1144 5.6*universalism)
+		ctx.fillStyle="779679"
+		ctx.fillRect(682-5.6*urbanism, 1144, 5.6*urbanism-2, 72)
+		ctx.fillRect(
+        ctx.fillStyle="#222222"
+        ctx.font="700 80px Montserrat"
+        ctx.textAlign="left"
+        ctx.fillText("12wackies90) 
+        ctx.font="50px Montserrat"
+        ctx.fillText(ideology, 20, 140)
+        
+        ctx.textAlign="left"
+		if (altruity > 30) {ctx.fillText(alruity + "%", 130, 237.5)}
+        if (cosmocracy > 30) {ctx.fillText(cosmocracy + "%" 130, 357.5)}
+		if (self > 30) {ctx.fillText(self + "%" 130, 477.5)}
+		if (moralist > 30) {ctx.fillText(moralist + "%" 130, 597.5)}
+		if (chaotic > 30) {ctx.fillText(chaotic + "%" 130, 717.5)}
+		if (regressive > 30) {ctx.fillText(regressive + "%" 130, 837.5)}
+		if (egalitarian > 30) {ctx.fillText(egalitarian + "%" 130, 957.5)}
+		if (nihilism > 30) {ctx.fillText(nihilism + "%" 130, 1077.5)}
+		if (universalism > 30) {ctx.fillText(nihilism + "%" 130, 1197.5)}
+		if (ochlocracy > 30) {ctx.fillText(ochlocracy + "%" 130, 1317.5)}
+		if (panculturalism > 30) {ctx.fillText(panculturalism + "%" 130, 1437.5)}
+		if (destructionism > 30) {ctx.fillText(panculturalism + "%" 130, 1557.5)}
+        ctx.textAlign="right"
+        if (avarice > 30) {ctx.fillText(avarice + "%" 670, 237.5)}
+		if (incognitism > 30) {ctx.fillText(incognitism + "%" 670, 357.5)}
+		if (totality > 30) {ctx.fillText(totality + "%" 670, 477.5)}
+		if (immorality > 30) {ctx.fillText(immorality + "%" 670, 597.5)}
+		if (systematic > 30) {ctx.fillText(systematic + "%" 670, 717.5)}
+		if (replacement > 30) {ctx.fillText(replacement + "%" 670, 837.5)}
+		if (supremacist > 30) {ctx.fillText(supremacist + "%" 670, 957.5)}
+		if (esoteric > 30) {ctx.fillText(esoteric + "%" 670, 1077.5)}
+		if (urbanism > 30) {ctx.fillText(urbanism + "%" 670, 1197.5)}
+		if (aristocracy > 30) {ctx.fillText(aristocracy + "%" 670, 1317.5)}
+		if (monoculturalism > 30) {ctx.fillText(aristocracy + "%" 670, 1437.5)}
+		if (irenic > 30) {ctx.fillText(irenic + "%" 670, 1557.5)}
+        ctx.font="300 30px Montserrat"
+        ctx.fillText("DatGuard was here UWU", 780, 60)
+		ctx.fillText(version, 780, 90)
+        ctx.textAlign="center"
+        ctx.fillText("Economic Axis: " + document.getElementById("economic-label").innerHTML, 400, 175)
+        ctx.fillText("Diplomatic Axis: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
+        ctx.fillText("Civil Axis: " + document.getElementById("state-label").innerHTML, 400, 415)
+        ctx.fillText("moralist Axis: " + document.getElementById("morlety-label").innerHTML, 400, 535)
+		ctx.fillText("Order Axis: " + document.getElementById("order-label").innerHTML, 400, 665)
+		ctx.fillText("Technological Axis: " + document.getElementById("technological-label").innerHTML, 400, 775)
+		ctx.fillText("Hierarchy Axis: " + document.getElementById("hierarchy-label").innerHTML, 400, 895)
+		ctx.fillText("Religious Axis: " + document.getElementById("religious-label").innerHTML, 400, 1015)
+		ctx.fillText("Regional Axis: " + document.getElementById("regional-label").innerHTML, 400, 1135)
+		ctx.fillText("Governmental Axis: " + document.getElementById("governmental-label").innerHTML, 400, 1255)
+		ctx.fillText("Militarism Axis: " + document.getElementById("militarim-label").innerHTML, 400, 1375)
+		ctx.fillText("Cultural Homogony: " +document.getElementById("cultural-label").innerHTML, 400, 1495)
+
+        document.getElementById("banner").src = c.toDataURL();
+    }
+    </script>
+</body>
